@@ -36,8 +36,9 @@
     ansible.builtin.template: # changed from copy to template
       src: expense.conf.j2  # changed from expense.conf to expense.conf.j2
       dest: /etc/nginx/default.d/expense.conf
-
-  - name: reload Nginx
-    ansible.builtin.service:
-      name: nginx
-      state: reloaded
+    notify: Restart nginx
+  
+  # - name: reload Nginx
+  #   ansible.builtin.service:
+  #     name: nginx
+  #     state: restarted
