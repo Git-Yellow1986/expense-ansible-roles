@@ -2,6 +2,3 @@ BACKEND_HOST: backend.learnaws.space
 app_location: /usr/share/nginx/html
 component: frontend
 
-# BACKEND_HOST: backend.daws81s.online
-# app_location: /usr/share/nginx/html
-# component: frontend
