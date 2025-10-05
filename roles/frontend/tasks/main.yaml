@@ -9,18 +9,18 @@
       state: started
       enabled: yes
 
-  - name: clear default Nginx html files
-    ansible.builtin.file:
-      path: /usr/share/nginx/html 
-      state: absent
   
-
-       
   - name: import tasks from common role
     ansible.builtin.include_role:
       name: common  
       tasks_from: main.yaml 
   
+  
+  # - name: clear default Nginx html files
+  #   ansible.builtin.file:
+  #     path: /usr/share/nginx/html 
+  #     state: absent
+ 
   # - name: create html directory
   #   ansible.builtin.file:
   #     path: /usr/share/nginx/html
