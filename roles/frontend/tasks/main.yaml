@@ -11,7 +11,7 @@
 
   
   - name: import tasks from common role
-    ansible.builtin.include_role:
+    ansible.builtin.import_role:
       name: common  
       tasks_from: main.yaml 
   
