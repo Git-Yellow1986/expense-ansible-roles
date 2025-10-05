@@ -1,0 +1,22 @@
+# Remove old directory if exists
+
+- name: Remove existing app location
+  ansible.builtin.file:
+    path: "{{ app_location }}"
+    state: absent
+  ognore_errors: true
+
+# Create app directory newly
+
+- name: Create app directory
+  ansible.builtin.file: 
+    path: "{{ app_location }}"
+    state: directory
+
+# Download application code from tasks
+
+- name: "download {{ component }} code"
+  ansible.builtin.unarchive: # unarchive module can download and unzip in one step
+    src: "https://expense-builds.s3.us-east-1.amazonaws.com/expense-{{ component }}-v2.zip"
+    dest: "{{ app_location }}"
+    remote_src: yes

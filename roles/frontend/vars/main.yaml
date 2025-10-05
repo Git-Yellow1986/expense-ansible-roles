@@ -1,1 +1,3 @@
 FRONTEND_HOST: backend.learnaws.space
+app_location: /usr/share/nginx/html
+component: frontend
