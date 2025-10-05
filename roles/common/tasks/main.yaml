@@ -4,7 +4,7 @@
   ansible.builtin.file:
     path: "{{ app_location }}"
     state: absent
-  ognore_errors: true
+  ignore_errors: true
 
 # Create app directory newly
 
